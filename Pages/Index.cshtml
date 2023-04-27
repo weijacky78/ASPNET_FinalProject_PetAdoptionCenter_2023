@@ -1,0 +1,34 @@
+﻿@page
+@model FinalProject.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h3>Meet some of our pets for adoption!</h3>
+</div>
+@*
+Fifth step, for everything (each pet) in list, put into slideshow and display pet.name in text underneath
+*@
+<div class="slideshow-container">
+    @foreach (var pet in Model.slideshowPets)
+    {
+        <div class="mySlides">
+            <img src="/images/@pet.FileName" alt="Slide 1" />
+            <div class="text">
+                <p>
+                    @pet.Name
+                </p>
+            </div>
+        </div>
+    }
+
+</div>
+<div class="video">
+    <iframe width="1000" height="640" src="https://www.youtube.com/embed/zkv1IyCdMaI" frameborder="0"
+        allowfullscreen></iframe>
+</div>
+
+
+<script src="/js/slideshow.js"></script>

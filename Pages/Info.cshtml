@@ -1,0 +1,162 @@
+﻿@page
+@model InfoModel
+@{
+    ViewData["Title"] = "Info";
+}
+<h1>@ViewData["Title"]</h1>
+
+<style>
+    .l-info-p-container {
+        padding: 2px;
+        margin-bottom: 40px;
+    }
+
+    h1 {
+        color: #D6208B;
+    }
+
+    .info-pics {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        padding: 8px;
+    }
+
+    .l-info-header {
+        position: sticky;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.531);
+        font-size: 22pt;
+        text-decoration: underline;
+        font-weight: bold;
+        border-radius: 15px;
+    }
+
+    .l-info-p {
+        font-size: 16pt;
+        text-indent: 10%;
+    }
+
+    #master-info-container {
+        display: flex;
+        background-color: white;
+    }
+
+    #m-info-child {
+        flex: 1;
+        border: 2px solid #259EA8;
+
+    }
+
+    .flex-child:first-child {
+        margin-right: 20px;
+    }
+</style>
+
+
+<div id="master-info-container">
+    <div id="m-info-child">
+        <div class="l-info-p-container">
+            <p class="l-info-header">Mission Statement:</p>
+            <p class="l-info-p">
+                At Second Chance Pet Adoption, we are dedicated to rescuing, rehabilitating, and rehoming animals in
+                need.
+                We believe that every animal deserves a second chance at life and are committed to finding them loving
+                and
+                permanent homes.
+                Our mission is to promote responsible pet ownership, educate our community on animal welfare, and
+                provide
+                exceptional care for
+                each animal in our adoption program.
+            </p>
+        </div>
+
+        <div class="l-info-p-container">
+            <p class="l-info-header">Adoption Information:</p>
+            <p class="l-info-p">We have a wide variety of animals available for adoption, including cats, dogs, rabbits,
+                and
+                other small
+                animals.
+                All of our pets are spayed or neutered, up-to-date on vaccinations, and microchipped for identification.
+                Our adoption fees vary depending on the animal and include a free veterinary exam within the first month
+                of
+                adoption.
+            </p>
+        </div>
+
+        <div class="l-info-p-container">
+            <p class="l-info-header">How to Adopt:</p>
+            <p class="l-info-p">
+                Adopting a pet from Second Chance Pet Adoption is easy! Simply visit our website or stop by our adoption
+                center
+                to see our available pets.
+                Once you have found a pet you are interested in, you will need to fill out an adoption application and
+                go
+                through a brief screening process.
+                We want to ensure that each pet is going to a loving and responsible home,
+                so we may ask for references or conduct a home visit before finalizing the adoption.
+            </p>
+        </div>
+
+        <div class="l-info-p-container">
+            <p class="l-info-header">Staff Information:</p>
+            <p class="l-info-p">
+                Our staff at Second Chance Pet Adoption are dedicated animal lovers who are passionate about helping
+                pets
+                find
+                their forever homes.
+                Our team includes trained adoption counselors, veterinary technicians, and animal care specialists who
+                work
+                hard
+                to ensure that each pet receives
+                the best possible care and attention.
+            </p>
+        </div>
+
+        <div class="l-info-p-container">
+            <p class="l-info-header">Location Information:</p>
+            <p class="l-info-p">
+                Our adoption center is located at 123 Main Street in London, Ontario. We are open seven days a week,
+                with extended hours on weekends to accommodate busy schedules. If you have any questions or would like
+                to
+                schedule a visit,
+                please don't hesitate to contact us. We look forward to helping you find your new best friend!
+            </p>
+        </div>
+    </div>
+
+    <div id="m-info-child">
+        <div id="mr-info-pic-container">
+            <div class="r-info-pic">
+                <img class="info-pics" src="/images/staffone.jpg">
+            </div>
+            <div class="r-info-pic">
+                <img class="info-pics" src="/images/stafftwo.jpg">
+            </div>
+            <div class="r-info-pic">
+                <img class="info-pics" src="/images/staffthree.jpg">
+            </div>
+            <div class="r-info-pic">
+                <img class="info-pics" src="/images/stafffour.jpg">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div id="ml-info-p-container">
+
+
+
+
+
+
+
+
+
+
+</div>
+

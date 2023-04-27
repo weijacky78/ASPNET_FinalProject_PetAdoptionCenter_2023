@@ -1,0 +1,116 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+body {
+  margin-bottom: 60px;
+  /* background-color: rgba(4, 17, 34, 0.432); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.thumb {
+  width: 200px;
+  height: 150px;
+  border-radius: 10%;
+}
+
+.desc {
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #d6208ac0;
+  size: 20px;
+}
+
+#logo-img {
+  width: 75%;
+
+}
+
+/* 
+if you want to animate the nav-bar (li), do it on this object */
+
+.nav-link {
+  font-size: 14pt;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-bottom: -50px;
+  border-radius: 10px;
+}
+
+.nav-link:hover {
+  background-color: #d6208ac0;
+  font-size: 14pt;
+  border-radius: 10px;
+}
+
+.pets-index-main-container {
+  background-color: rgba(255, 255, 255, 0.774);
+
+}
+
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+h1 {
+  font-family: fantasy;
+}
+
+.pet-index-create-container {
+  margin-top: 20px;
+}
+
+.pet-index-create {
+
+  text-decoration: none;
+  color: #259da8be;
+  font-size: 16px;
+  font-family: fantasy;
+}
+
+.video {
+  max-width: 1000px;
+  margin: auto;
+
+}
+
+.text-center {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  color: #D6208B;
+  padding-top: 10px;
+}
+
+.pet-index-link a {
+  text-decoration: none;
+  color: #259da8be;
+}
+
+.pet-index-link a:hover {
+
+  color: #D6208B;
+}

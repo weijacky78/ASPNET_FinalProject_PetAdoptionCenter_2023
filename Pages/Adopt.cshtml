@@ -1,0 +1,90 @@
+@page
+@model AdoptModel
+@{
+    ViewData["Title"] = "Submit Adoption Request";
+}
+<h1 class="h1info">@ViewData["Title"]</h1>
+
+<style>
+    .h1info {
+        color: #D6208B;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: black;
+    }
+
+    label,
+    select,
+    textarea {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .label {
+        text-decoration: underline;
+        font-style: italic;
+    }
+
+    .submitbutton {
+        background-color: #259da8;
+        color: white;
+        transition: background-color 0.5s ease;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .submitbutton:hover {
+        background-color: #D6208B;
+        color: white;
+    }
+</style>
+
+@if (Model.FormSubmitted)
+{
+    <div>
+        <p>Thank you for submitting your request!</p>
+    </div>
+}
+else
+{
+    @* use HTTPPost, when submitting form it does a post (submitting data to create something)
+instead of get (retrieving data) -loose definitions- *@
+    <form method="post">
+        <label for="email" class="label">Enter your email address:</label>
+        <input type="email" id="email" name="email" required asp-for="Email">
+
+        <label for="category" class="label">Select a pet:</label>
+        @*
+    4th step
+    Populating select with the SelectList(C# list) items
+    *@
+        <select asp-for="Pet.PetId" asp-items="@Model.SelectItems">
+            <option value="">Select a pet for adoption</option>
+        </select>
+
+        <label for="message" class="label">Write us a message:</label>
+        <textarea id="message" name="message" required asp-for="Message"></textarea>
+
+        <input type="submit" value="Save" class="submitbutton" />
+    </form>
+
+}

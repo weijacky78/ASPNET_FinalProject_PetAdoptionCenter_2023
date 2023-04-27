@@ -1,0 +1,93 @@
+@page
+@model FinalProject.Pages.Pets.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    h1 {
+        color: #D6208B;
+    }
+</style>
+
+<h1>Pets for Adoption</h1>
+<div>
+    <h1>👓</h1>
+    <form>
+        <p>Search by Age:
+            <input type="number" asp-for="InputAge" />
+            <select asp-for="LessThanTheAge">
+                <option value="true">Less or equals</option>
+                <option value="false">Greater</option>
+            </select>
+        </p>
+        <p>Search by Type: <input type="text" asp-for="Query" /></p>
+
+        <input type="submit" value="Search" />
+    </form>
+
+</div>
+<div class="pets-index-main-container">
+    <p class="pet-index-create-container">
+        <a class="pet-index-create" asp-page="Create">Login to Create New Pet's Profile</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pets[0].Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pets[0].Age)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pets[0].PetType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pets[0].Gender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pets[0].Description)
+                </th>
+                <th>
+                    Image
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Pets)
+            {
+                <tr>
+                    <td class="desc">
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td class="desc">
+                        @Html.DisplayFor(modelItem => item.Age)
+                    </td>
+                    <td class="desc">
+                        @Html.DisplayFor(modelItem => item.PetType)
+                    </td>
+                    <td class="desc">
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </td>
+                    <td class="desc">
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+
+                        <img class="thumb" src="/images/@item.FileName" />
+                        @* //@item/FileName is the string literal of the file name *@
+
+                    </td>
+                    <td class="pet-index-link">
+                        <a asp-page="./Edit" asp-route-id="@item.PetId">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.PetId">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.PetId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
